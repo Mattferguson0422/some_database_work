@@ -61,8 +61,8 @@ function modifySkill() {
 		), array(ID => $id));	
 	}  
 	
-	// Still working on this conditional
-	if(isset($id) && $flex != NULL){
+	// If no skills have been set yet and testing a random column to ensure it's filled out.
+	if(empty($id) && $flex != NULL){
 		$db->insert('skilletencies', array(
 			'financial' => $finance,
 			'flexibility' => $flex,
